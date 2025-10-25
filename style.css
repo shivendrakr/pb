@@ -1,0 +1,180 @@
+/* General Style */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f5;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #e75480;
+}
+
+p {
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('images/cover.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3em;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 15px 0 30px;
+}
+
+button {
+  background: #e75480;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(231, 84, 128, 0.4);
+}
+
+button:hover {
+  background: #ff8fab;
+  transform: scale(1.05);
+}
+
+/* Story Sections */
+.story {
+  padding: 80px 15%;
+  text-align: center;
+  background: #fff0f5;
+  position: relative;
+}
+
+.story:nth-child(even) {
+  background: #ffe4ec;
+}
+
+.story h2 {
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.photo {
+  width: 70%;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Chat Box */
+.chat {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: fit-content;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.me {
+  color: #e75480;
+  margin-bottom: 10px;
+}
+
+.her {
+  color: #ff6699;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.gallery img {
+  width: 220px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover {
+  transform: scale(1.07);
+}
+
+/* Ending Section */
+.end {
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e7);
+  padding-bottom: 120px;
+}
+
+.sig {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+}
+
+/* Floating Hearts */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* Animations */
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade effect on scroll */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

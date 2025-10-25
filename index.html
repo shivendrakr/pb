@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — For Pragya 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Floating Hearts Container -->
+  <div id="hearts-container"></div>
+
+  <!-- Landing Section -->
+  <section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="content fade-in">
+      <h1>Happy Birthday, Pragya 💖</h1>
+      <p id="typingText"></p>
+      <button id="beginBtn">Begin Our Story</button>
+    </div>
+  </section>
+
+  <!-- Story Section 1 -->
+  <section class="story fade" id="wedding">
+    <h2>✨ 2nd February 2025 — The Wedding Day ✨</h2>
+    <p>It was a night of lights, laughter, and chaos — and there you were… sitting quietly on one side, lost in your own world.  
+    Mujhe laga, "yeh kaun hai, itni calm energy ke saath?" 😌</p>
+    <img src="images/wedding_moment.jpg" alt="Wedding moment" class="photo">
+  </section>
+
+  <!-- Story Section 2 -->
+  <section class="story fade" id="first-talk">
+    <h2>💬 The First Talk</h2>
+    <p>I took all my courage… walked up to you with my brother… and sat in front of you.  
+    Tum tab bhi smile kar rahi thi, bina reason ke — aur wahi smile yaad reh gayi 💗</p>
+
+    <div class="chat">
+      <div class="me">🧍‍♂️ Me: “Hi, enjoying the wedding?”</div>
+      <div class="her">👩‍🦰 You: “Actually, maine pehli baar Mithilanchal ki shaadi attend ki hai… it’s so different and beautiful!”</div>
+      <div class="me">🧍‍♂️ Me: “Haan, yahan mithai se zyada logon mein sweetness hoti hai.” 😄</div>
+      <div class="her">👩‍🦰 You: “Haha, true! Waise main MBA kar rahi hoon… aur aap?”</div>
+      <div class="me">🧍‍♂️ Me: “Main code karta hoon… par aaj lagta hai code se zyada aap pe focus kar raha hoon.” 😉</div>
+    </div>
+  </section>
+
+  <!-- Story Section 3 -->
+  <section class="story fade" id="tissue">
+    <h2>🧻 The Tissue Moment</h2>
+    <p>You softly said “Tissue…” while searching around.  
+    Main door tha, par suna sabse pehle maine.  
+    I picked it up and handed it to you — and that tiny moment felt like a lifetime. 💗</p>
+    <img src="images/tissue_moment.jpg" alt="Tissue moment" class="photo">
+  </section>
+
+  <!-- Story Section 4 -->
+  <section class="story fade" id="number">
+    <h2>📱 The Number Exchange</h2>
+    <p>Before you left, I gathered all the courage and said — “Can I get your number?”  
+    You paused for a moment… smiled slightly… and said, “Okay, note kar lo.” 💬</p>
+    <p>Us pal laga jaise universe ne mujhe ek chance de diya ho.</p>
+    <img src="images/number_exchange.jpg" alt="Phone exchange" class="photo">
+  </section>
+
+  <!-- Story Section 5 -->
+  <section class="story fade" id="today">
+    <h2>❤️ Us Today Imagination</h2>
+    <p>From that night to now — every single conversation, every late-night chat, every laugh…  
+    has made me feel more connected to you.  
+    Shayad kisi din hum wahi 2nd February apni shaadi ki date bana lein. 💍</p>
+
+    <!-- Love Meter -->
+    <div class="love-meter">
+      <p>Love Meter 💞</p>
+      <div class="meter">
+        <div class="fill" id="loveFill"></div>
+      </div>
+      <span id="lovePercent">0%</span>
+    </div>
+
+    <div class="gallery">
+      <img src="images/us1.jpg" alt="Memory 1">
+      <img src="images/us2.jpg" alt="Memory 2">
+      <img src="images/us3.jpg" alt="Memory 3">
+    </div>
+  </section>
+
+  <!-- Final Section -->
+  <section class="story end fade" id="end">
+    <h2 id="birthdayTitle">🎂 Happy Birthday, Pragya 💖</h2>
+    <p>You make my world softer, brighter, and complete.  
+    Tum meri kahani ka wo part ho jahan har emotion beautiful lagta hai.</p>
+
+    <div class="hidden-messages" id="hiddenMsgs">
+      <p>💌 You’re my peace in chaos.</p>
+      <p>💫 Every smile of yours deserves its own song.</p>
+      <p>🌸 Tum meri kahani ka sabse khoobsurat twist ho.</p>
+      <p>❤️ You’re not just my favorite person — you’re my favorite feeling.</p>
+    </div>
+
+    <p>— Yours, <span class="sig">Shivendra 🌸</span></p>
+    <button id="replayBtn">Watch Again 💞</button>
+
+    <button id="gameBtn" class="special-btn">Play the Surprise Game 🎮💞</button>
+  </section>
+
+  <audio id="bgMusic" src="music/romantic.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

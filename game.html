@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragya’s Surprise Game 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom right, #ffd1dc, #fff);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e91e63;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/contain;
+      cursor: pointer;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      to { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    #message {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #d81b60;
+      font-size: 1.5rem;
+      display: none;
+    }
+
+    #backBtn {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #backBtn:hover {
+      background: #f50057;
+    }
+  </style>
+</head>
+<body>
+  <h1>💞 Catch the Hearts, Pragya 💞</h1>
+  <p>Each one you catch shows what you mean to me 💗</p>
+  <div id="message"></div>
+  <button id="backBtn" onclick="goBack()">Go Back to Story 💖</button>
+
+  <script>
+    const compliments = [
+      "You light up my world 🌸",
+      "Your smile melts my heart 💕",
+      "Every heartbeat says your name 💓",
+      "You’re my calm and my chaos 😌",
+      "You’re the reason love feels real 💗"
+    ];
+
+    const totalHearts = compliments.length;
+    let caught = 0;
+
+    // create floating hearts
+    for (let i = 0; i < totalHearts; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 90 + '%';
+      heart.style.animationDuration = 5 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+
+      heart.addEventListener('click', () => {
+        heart.remove();
+        showMessage(compliments[caught]);
+        caught++;
+        if (caught === totalHearts) {
+          finalMessage();
+        }
+      });
+    }
+
+    function showMessage(text) {
+      const msg = document.getElementById('message');
+      msg.textContent = text;
+      msg.style.display = 'block';
+      setTimeout(() => (msg.style.display = 'none'), 1500);
+    }
+
+    function finalMessage() {
+      const msg = document.getElementById('message');
+      msg.textContent = "You caught all the hearts 💖 You’ve caught mine too, Pragya 💞";
+      msg.style.display = 'block';
+      document.getElementById('backBtn').style.display = 'inline-block';
+      confetti();
+    }
+
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+
+    // simple confetti effect
+    function confetti() {
+      for (let i = 0; i < 50; i++) {
+        const c = document.createElement('div');
+        c.style.position = 'absolute';
+        c.style.left = Math.random() * 100 + '%';
+        c.style.top = Math.random() * 100 + '%';
+        c.style.width = '8px';
+        c.style.height = '8px';
+        c.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        c.style.opacity = 0.8;
+        c.style.borderRadius = '50%';
+        c.style.animation = 'fall 2s linear infinite';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 2000);
+      }
+    }
+  </script>
+</body>
+</html>
